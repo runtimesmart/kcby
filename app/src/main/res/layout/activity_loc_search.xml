@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/map_search_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="16dp"
+                android:hint="请输入目的地"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:textColorHint="@color/community_tab_txt_normal_color"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/search_edit_delete"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/search_clear"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/search_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_7"
+            android:text="取消"
+            android:textColor="@color/map_search_cancel"
+            android:textSize="@dimen/text_size15" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@color/color_f5f5f5" />
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/color_1BC787"-->
+<!--        android:elevation="@dimen/dimen_20">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/search_food"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/dimen_11"
+                android:paddingBottom="@dimen/dimen_11"
+                android:text="美食"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size14" />
+
+            <TextView
+                android:id="@+id/search_gas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/dimen_11"
+                android:paddingBottom="@dimen/dimen_11"
+                android:text="加油站"
+                android:textColor="@color/color_333333"
+
+                android:textSize="@dimen/text_size14" />
+
+            <TextView
+                android:id="@+id/search_supermarket"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/dimen_11"
+                android:paddingBottom="@dimen/dimen_11"
+                android:text="超市"
+
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size14" />
+
+            <TextView
+                android:id="@+id/search_wc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/dimen_11"
+                android:paddingBottom="@dimen/dimen_11"
+
+                android:text="厕所"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size14" />
+            <TextView
+                android:id="@+id/search_collect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/dimen_11"
+                android:paddingBottom="@dimen/dimen_11"
+
+                android:text="收藏"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size14" />
+        </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/color_f5f5f5" />
+
+    <FrameLayout
+        android:id="@+id/frm_SearchResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lsv_SuggestResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_10" />
+
+
+    </FrameLayout>
+</LinearLayout>

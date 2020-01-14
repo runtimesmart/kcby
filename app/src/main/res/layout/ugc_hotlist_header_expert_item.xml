@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50dp"
+    android:layout_height="73dp"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/hot_recommend_avatar"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/avar" />
+
+    <ImageView
+        android:id="@+id/hot_user_vip"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignRight="@id/hot_recommend_avatar"
+        android:layout_alignBottom="@id/hot_recommend_avatar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/vip1" />
+
+    <TextView
+        android:id="@+id/hot_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="13sp"
+        android:layout_below="@id/hot_recommend_avatar"
+        android:text="海涛说车" />
+</RelativeLayout>

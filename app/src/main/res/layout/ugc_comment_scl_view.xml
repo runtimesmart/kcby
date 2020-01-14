@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/cmt_pub_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="10sp"
+        android:text="三分钟前"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/community_topic_cmt_date_color" />
+
+    <TextView
+        android:id="@+id/cmt_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cmt_pub_date"
+        android:layout_centerVertical="true"
+
+        android:layout_marginRight="20dp"
+        android:text="回复"
+        android:textColor="@color/community_event_begin_status"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/cmt_transmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/cmt_reply"
+        android:text="转发"
+        android:textColor="@color/community_event_begin_status"
+        android:textSize="11sp" />
+
+
+
+        <TextView
+            android:id="@+id/cmt_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/topic_cmt_like"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:drawablePadding="3dp"
+            android:text="254"
+            android:textColor="@color/community_topic_cmt_like_color"
+            android:textSize="11sp" />
+</RelativeLayout>

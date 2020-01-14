@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/wechat"
+        android:icon="@drawable/share_weixin"
+        android:title="@string/ugc_share_weixin" />
+    <item
+        android:id="@+id/pengyouquan"
+        android:icon="@drawable/share_pengyouquan"
+        android:title="@string/ugc_share_pengyouquan" />
+    <item
+        android:id="@+id/weibo"
+        android:icon="@drawable/share_weibo"
+        android:title="@string/ugc_share_weibo" />
+    <item
+        android:id="@+id/qq"
+        android:icon="@drawable/share_qunzu"
+        android:title="@string/ugc_share_qunzu" />
+
+</menu>

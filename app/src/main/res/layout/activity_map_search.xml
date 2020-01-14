@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/search_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/dimen_15">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:padding="@dimen/dimen_10"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="@dimen/dimen_296"
+            android:layout_height="@dimen/dimen_44"
+            android:layout_marginTop="@dimen/dimen_18"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:background="@drawable/map_search_bg"
+            android:drawableLeft="@drawable/search_left_tip"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="请输入目的地"
+            android:textColor="@color/map_search_tip"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/map_search_loc"
+        android:layout_width="@dimen/dimen_36"
+        android:layout_height="@dimen/dimen_36"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/dimen_15"
+
+        android:layout_marginBottom="@dimen/dimen_34"
+        android:background="@drawable/map_loc" />
+
+    <Button
+        android:id="@+id/map_search_toilet"
+        android:layout_width="@dimen/dimen_36"
+        android:layout_height="@dimen/dimen_36"
+        android:layout_above="@id/map_search_loc"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dimen_15"
+        android:layout_marginBottom="@dimen/dimen_34"
+        android:background="@drawable/icon_wc" />
+
+    <Button
+        android:id="@+id/map_search_supermarket"
+        android:layout_width="@dimen/dimen_36"
+        android:layout_height="@dimen/dimen_36"
+        android:layout_above="@id/map_search_toilet"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dimen_15"
+
+        android:layout_marginBottom="@dimen/dimen_34"
+        android:background="@drawable/icon_supermarket" />
+
+    <Button
+        android:id="@+id/map_search_petrol"
+        android:layout_width="@dimen/dimen_36"
+        android:layout_height="@dimen/dimen_36"
+        android:layout_above="@id/map_search_supermarket"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dimen_15"
+        android:layout_marginBottom="@dimen/dimen_34"
+
+        android:background="@drawable/icon_gas" />
+
+    <Button
+        android:id="@+id/map_search_food"
+        android:layout_width="@dimen/dimen_36"
+        android:layout_height="@dimen/dimen_36"
+        android:layout_above="@id/map_search_petrol"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dimen_15"
+        android:layout_marginBottom="@dimen/dimen_34"
+        android:background="@drawable/icon_food" />
+
+
+    <Button
+        android:id="@+id/map_search_traffic"
+        android:layout_width="@dimen/dimen_36"
+        android:layout_height="@dimen/dimen_36"
+        android:layout_above="@id/map_search_food"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dimen_15"
+        android:layout_marginBottom="@dimen/dimen_92"
+        android:background="@drawable/traffic" />
+
+    <ImageView
+        android:id="@+id/report_road"
+        android:layout_width="@dimen/dimen_112"
+        android:layout_height="@dimen/dimen_112"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/map_report_traffic" />
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?><!--    搜索-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_36"
+    android:layout_marginLeft="@dimen/dimen_20"
+    android:layout_marginTop="@dimen/dimen_25"
+    android:layout_marginRight="@dimen/dimen_20"
+    android:layout_marginBottom="@dimen/dimen_25"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/im_group_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/im_icon_create"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/icon_add_plus" />
+
+        <TextView
+            android:id="@+id/im_txt_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="创建群"
+            android:textColor="@color/color_3240DB"
+            android:textSize="@dimen/text_size13" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/search_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:layout_toLeftOf="@id/im_group_create"
+        android:background="@drawable/community_search_bg"
+        android:drawableLeft="@drawable/search_icon"
+        android:drawablePadding="16dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="12sp"
+
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:layout_toLeftOf="@id/im_group_create"
+        android:background="@drawable/community_search_bg"
+        android:drawableLeft="@drawable/search_icon"
+        android:drawablePadding="5dp"
+        android:hint="搜索群"
+        android:imeOptions="actionSearch"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/community_tab_txt_normal_color"
+        android:textSize="12sp" />
+
+</RelativeLayout>

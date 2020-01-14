@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_15" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:paddingStart="@dimen/dimen_15"
+                android:paddingEnd="@dimen/dimen_15"
+                android:text="家和公司"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size14" />
+
+            <include layout="@layout/ugc_common_divider" />
+
+            <include
+                android:id="@+id/collect_home"
+                layout="@layout/map_common_collect_item" />
+
+            <include
+                android:id="@+id/collect_company"
+
+                layout="@layout/map_common_collect_item" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/collect_poi_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:paddingStart="@dimen/dimen_15"
+                android:paddingEnd="@dimen/dimen_15" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

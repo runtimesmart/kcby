@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_rectangle_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/poi_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_25"
+        android:layout_marginTop="@dimen/dimen_25"
+        android:textStyle="bold"
+        android:text="中国石油首汽加油站"
+        android:textSize="@dimen/text_size21" />
+
+    <TextView
+        android:id="@+id/poi_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_25"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginBottom="@dimen/dimen_8"
+
+        android:text="距离你25公里"
+        android:textColor="@color/color_9B9B9B"
+        android:textSize="@dimen/text_size11" />
+
+    <TextView
+        android:id="@+id/poi_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_25"
+        android:layout_marginBottom="@dimen/dimen_30"
+        android:text="北京市朝阳区花家地路花家地南里小区甲2区"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_4"
+        android:background="@color/color_cccccc" />
+
+    <TextView
+        android:id="@+id/poi_to_navi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_9"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_19"
+        android:background="@drawable/blue_button_bg"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_size17"
+        android:layout_gravity="right"
+        android:text="导航"
+        />
+</LinearLayout>

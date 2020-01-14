@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/ugc_common_userinfo_view" />
+
+    <!--    原消息内容-->
+    <include
+        android:id="@+id/feed_content_origin"
+        layout="@layout/ugc_common_origin_content_view" />
+
+    <!--    转发消息内容-->
+    <include
+        android:id="@+id/feed_content_transmit"
+        layout="@layout/ugc_common_transmit_content_view"
+        android:visibility="gone" />
+
+    <!--  位置、话题、转评赞-->
+    <include
+        android:id="@+id/ugc_bottom_layout"
+        layout="@layout/ugc_hotlist_bottom_view_item" />
+
+</merge>

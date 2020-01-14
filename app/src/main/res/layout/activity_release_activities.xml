@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.activities.ReleaseActivitiesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="325dp"
+                android:background="@drawable/activites_statusbar_bg">
+
+                <RelativeLayout
+                    android:id="@+id/title_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        android:id="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/cancel"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_15_sp" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/push_activity"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_17_sp" />
+
+                    <TextView
+                        android:id="@+id/next_step"
+                        android:layout_width="60dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@string/next_step"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_15_sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_name_lay"
+                    android:layout_width="match_parent"
+                    android:background="@color/color_FAFCFF"
+                    android:layout_height="49dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/vehicle_rules_logo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/activity_namne_icon" />
+
+                    <TextView
+                        android:id="@+id/activity_name_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/vehicle_rules_logo"
+                        android:text="@string/activity_name"
+                        android:textColor="@color/color_cccccc"
+                        android:textSize="@dimen/text_size_15_sp" />
+
+                    <EditText
+                        android:id="@+id/activity_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="right"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@id/activity_name_tip"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:hint="请输入活动名称"
+                        android:ellipsize="start"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_size_15_sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/resort_lay"
+                android:layout_width="match_parent"
+                android:background="@color/color_FAFCFF"
+                android:layout_marginBottom="15dp"
+                android:layout_height="49dp"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/resort_logo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/resort_icom" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/resort_logo"
+                    android:text="@string/resort"
+                    android:textColor="@color/color_cccccc"
+                    android:textSize="@dimen/text_size_15_sp" />
+
+                <TextView
+                    android:id="@+id/activity_resort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableLeft="@drawable/resort_location_icon"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_15_sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/start_time_lay"
+                android:layout_width="match_parent"
+                android:background="@color/color_FAFCFF"
+                android:layout_marginBottom="15dp"
+                android:layout_height="49dp"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/start_time_logo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/activity_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/start_time_logo"
+                    android:text="@string/activity_start_time"
+                    android:textColor="@color/color_cccccc"
+                    android:textSize="@dimen/text_size_15_sp" />
+                <TextView
+                    android:id="@+id/activity_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/activity_time_right"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_15_sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/start_stop_lay"
+                android:layout_width="match_parent"
+                android:background="@color/color_FAFCFF"
+                android:layout_marginBottom="15dp"
+                android:layout_height="49dp"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/start_stop_logo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/activity_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/start_stop_logo"
+                    android:text="@string/activity_stop_time"
+                    android:textColor="@color/color_cccccc"
+                    android:textSize="@dimen/text_size_15_sp" />
+                <TextView
+                    android:id="@+id/activity_stop_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/activity_time_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_15_sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/deadline_lay"
+                android:layout_width="match_parent"
+                android:background="@color/color_FAFCFF"
+                android:layout_marginBottom="15dp"
+                android:layout_height="49dp"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/deadline_logo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/deadline_registration" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/deadline_logo"
+                    android:text="@string/deadline_registration"
+                    android:textColor="@color/color_cccccc"
+                    android:textSize="@dimen/text_size_15_sp" />
+                <TextView
+                    android:id="@+id/activity_deadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/activity_time_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_15_sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/maximum_lay"
+                android:layout_width="match_parent"
+                android:background="@color/color_FAFCFF"
+                android:layout_marginBottom="15dp"
+                android:layout_height="49dp"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/maximum_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/maximum" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/maximum_logo"
+                    android:text="@string/maximum_registrations"
+                    android:textColor="@color/color_cccccc"
+                    android:textSize="@dimen/text_size_15_sp" />
+                <EditText
+                    android:id="@+id/activity_maximum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:inputType="phone|number"
+                    android:digits="1234567890"
+                    android:maxLength="8"
+                    android:gravity="right"
+                    android:hint="请输入人数"
+                    android:background="@null"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_15_sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wechat_group_code_lay"
+                android:layout_width="match_parent"
+                android:background="@color/color_FAFCFF"
+                android:layout_marginBottom="15dp"
+                android:layout_height="49dp"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/wechat_group_code_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/maximum" />
+
+                <TextView
+                    android:id="@+id/code_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/wechat_group_code_icon"
+                    android:text="@string/upload_wechat_group_code"
+                    android:textColor="@color/color_cccccc"
+                    android:textSize="@dimen/text_size_15_sp" />
+                <TextView
+                    android:id="@+id/wechat_group_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/code_tip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:ellipsize="start"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_15_sp"
+                    android:singleLine="true" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="@string/deadline_registration_tips"
+                android:textColor="@color/color_9B9B9B"
+                android:textSize="@dimen/text_size_12_sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

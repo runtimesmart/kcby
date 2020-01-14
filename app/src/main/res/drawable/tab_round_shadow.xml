@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--第一层：上面偏离一定距离-->
+    <item android:top="4dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp" />
+            <solid android:color="@color/color_cccccc" />
+            <gradient
+                android:angle="270"
+                android:type="linear"
+                android:startColor="@color/color_cccccc"
+                android:endColor="@color/color_light_grey"/>
+        </shape>
+    </item>
+    <!--第二层：下面偏离一定距离-->
+    <item android:bottom="5dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp" />
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+</layer-list>

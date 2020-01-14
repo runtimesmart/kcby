@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.vehicletools.ViolationDetailsActivity">
+
+    <include
+        android:id="@+id/statusbar"
+        layout="@layout/activity_statusbar"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_48" />
+
+    <TextView
+        android:id="@+id/title_bar"
+        android:layout_below="@id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:textStyle="bold"
+        android:textColor="@color/color_4F5761"
+        android:textSize="@dimen/sp_20" />
+
+    <RelativeLayout
+        android:id="@+id/violation_info"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/violation_bt"
+            android:layout_width="148dp"
+            android:layout_height="55dp"
+            android:background="@drawable/handling_violations"
+            android:text="立即办理"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_17_sp" />
+
+        <LinearLayout
+            android:layout_toLeftOf="@id/violation_bt"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="-5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_333333">
+
+            <TextView
+                android:id="@+id/vehicle_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_12_sp" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8"
+                android:background="@color/color_9B9B9B"/>
+            <TextView
+                android:id="@+id/vehicle_penalty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_12_sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8"
+                android:background="@color/color_9B9B9B"/>
+
+            <TextView
+                android:id="@+id/vehicle_buckle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_12_sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyuclerview"
+        android:layout_below="@id/title_bar"
+        android:layout_above="@id/violation_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"/>
+</RelativeLayout>

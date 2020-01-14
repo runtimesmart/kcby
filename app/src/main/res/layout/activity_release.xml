@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".view.activity.dynamic.ReleaseActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/cancel"
+            android:textColor="@color/color_272D32"
+            android:textSize="@dimen/text_size_15_sp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/release_dynamics"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_17_sp" />
+
+        <TextView
+            android:id="@+id/release"
+            android:layout_width="60dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/activity_release__rectangle"
+            android:gravity="center"
+            android:text="@string/release"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_15_sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp">
+
+            <EditText
+                android:id="@+id/release_content"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@android:color/white"
+                android:gravity="top"
+                android:hint="@string/input_tips" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/image_recyclerviw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/release_content" />
+
+            <LinearLayout
+                android:id="@+id/position_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_recyclerviw"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/lbs" />
+
+                <TextView
+                    android:id="@+id/position_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/position"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_17_sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/position_lay"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/color_DADADA" />
+
+            <include
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/loading_view"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

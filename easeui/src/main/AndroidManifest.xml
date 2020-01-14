@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.hyphenate.easeui">
+
+
+    <application>
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        <activity android:name=".ui.EaseMapActivity" />
+        <activity android:name=".ui.EaseShowBigImageActivity" />
+    </application>
+</manifest>

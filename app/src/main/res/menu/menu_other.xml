@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/moments"
+        android:icon="@drawable/share_save"
+        android:title="@string/ugc_save_pic" />
+    <item
+        android:id="@+id/complaint"
+        android:icon="@drawable/share_complain"
+        android:title="@string/ugc_complain" />
+</menu>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poi_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_16">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/poi_icon"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:src="@drawable/poi_loc" />-->
+
+    <LinearLayout
+        android:id="@+id/poi_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/poi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxEms="12"
+            android:text="天安门东"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size17" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/poi_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_13"
+                android:text="5公里"
+                android:textColor="@color/color_9B9B9B"
+
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/poi_loc_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="15"
+                android:text="北京市"
+                android:textColor="@color/color_9B9B9B"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/poi_to_navi"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/poi_navi_icon" />
+
+    <ImageView
+        android:id="@+id/poi_phone_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_toLeftOf="@id/poi_to_navi"
+        android:src="@drawable/poi_call" />
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".view.activity.news.ColumnActivity">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/album_image"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/album_add" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/album_unselected"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:src="@drawable/ablum_unselected" />
+
+            <TextView
+                android:id="@+id/tv_ablum_selected"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:background="@drawable/round_1bc787"
+                android:gravity="center"
+                android:text="12"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_12_sp" />
+        </FrameLayout>
+
+    </FrameLayout>
+</RelativeLayout>

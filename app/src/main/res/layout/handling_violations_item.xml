@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_20"
+    android:layout_marginRight="@dimen/dimen_20"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon_image"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@drawable/hm_icon_timeline" />
+
+        <TextView
+            android:id="@+id/vehicle_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/icon_image"
+            android:gravity="center"
+            android:textColor="@color/color_8F8F8F"
+            android:textSize="@dimen/text_size_12_sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:background="@color/color_F3F4F5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="38dp">
+
+        <TextView
+            android:id="@+id/violation_wherefore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/violation_wherefore"
+            android:textColor="@color/color_8F8F8F"
+            android:textSize="@dimen/text_size_12_sp" />
+
+        <TextView
+            android:id="@+id/wherefore_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_toRightOf="@id/violation_wherefore"
+            android:textColor="@color/color_4F5761"
+            android:textSize="@dimen/text_size_14_sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="@dimen/dimen_11"
+        android:layout_marginBottom="@dimen/dimen_11"
+        android:background="@color/color_F3F4F5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="38dp">
+
+        <TextView
+            android:id="@+id/violation_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/violation_address"
+            android:textColor="@color/color_8F8F8F"
+            android:textSize="@dimen/text_size_12_sp" />
+
+        <TextView
+            android:id="@+id/address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_toRightOf="@id/violation_address"
+            android:textColor="@color/color_4F5761"
+            android:textSize="@dimen/text_size_14_sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="@dimen/dimen_11"
+        android:layout_marginBottom="@dimen/dimen_25"
+        android:background="@color/color_F3F4F5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_25"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/hm_icon_buckle"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/hm_icon_buckle" />
+
+            <TextView
+                android:id="@+id/buckle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/hm_icon_buckle"
+                android:gravity="center"
+                android:textColor="@color/color_8F8F8F"
+                android:textSize="@dimen/text_size_12_sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/hm_iocn_penalty"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/hm_iocn_penalty" />
+
+            <TextView
+                android:id="@+id/hm_penalty_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/hm_iocn_penalty"
+                android:gravity="center"
+                android:textColor="@color/color_8F8F8F"
+                android:textSize="@dimen/text_size_12_sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

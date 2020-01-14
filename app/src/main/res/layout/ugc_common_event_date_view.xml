@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/feed_event_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="4">
+
+    <TextView
+        android:id="@+id/event_begin_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:text="活动开始:9月8日"
+        android:textColor="@color/community_event_info_color"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/event_apply_deadline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:text="报名截止:10月20号"
+        android:textColor="@color/community_event_info_color"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/event_max_members"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="人数上限:30人"
+        android:textColor="@color/community_event_info_color"
+        android:textSize="11sp" />
+
+</LinearLayout>

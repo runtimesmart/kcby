@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="249dp"
+    android:background="@drawable/news_home_item_bg_white">
+    <RelativeLayout
+        android:id="@+id/blogger_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/blogger_avatar"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/blogger_des_icon"
+            android:layout_width="match_parent"
+            android:layout_height="179dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_big" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/blogger_name"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/color_20_848484"
+                android:ellipsize="end"
+                android:padding="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:text="adfaddaf"/>
+
+            <TextView
+                android:id="@+id/blogger_des"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:padding="8dp"
+                android:text="adfadf"
+                android:textColor="@color/color_242424"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

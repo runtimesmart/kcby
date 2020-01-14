@@ -1,0 +1,2 @@
+include ':app', ':common', 'widget', 'zxing', 'rxretrofitlib', 'bottomdialog', ':easeui'
+rootProject.name='CTB_OPEN_CAR'

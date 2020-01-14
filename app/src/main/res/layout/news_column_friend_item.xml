@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".view.fragment.MeFragment">
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="260dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/news_home_item_bg_white">
+        <ImageView
+            android:id="@+id/avar_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/default_avar_icon"/>
+
+        <LinearLayout
+            android:id="@+id/friend_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/avar_icon"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/friend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/text_size_16_sp"
+                android:textColor="@android:color/black"
+                android:text="ANN"/>
+
+            <ImageView
+                android:id="@+id/friend_status"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:visibility="gone"
+                android:background="@drawable/vip1"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/friend_des"
+            android:layout_below="@id/friend_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_size_12_sp"
+            android:textColor="@color/color_9B9B9B"
+            android:text="ssssss"/>
+
+        <Button
+            android:id="@+id/subscription"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/friend_des"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/follow_news"/>
+    </RelativeLayout>
+</RelativeLayout>

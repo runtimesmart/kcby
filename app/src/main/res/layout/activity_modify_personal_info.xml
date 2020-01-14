@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.person.ModifyPersonalInfoActivity">
+
+    <include
+        layout="@layout/activity_statusbar"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_48" />
+    <RelativeLayout
+        android:id="@+id/personal_avatar_lay"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/personal_avatar_logo"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/default_avar_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/personal_avatar_logo"
+            android:text="@string/personal_avatar_modify"
+            android:textColor="@color/color_212121"
+            android:textSize="@dimen/text_size_15_sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nickname_lay"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/personal_nick_name_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/personal_nick_name"
+            android:textColor="@color/color_212121"
+            android:textSize="@dimen/text_size_15_sp" />
+        <EditText
+            android:id="@+id/personal_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/personal_nick_name_tip"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:hint="@string/input_personal_nick_name"
+            android:textColor="@color/color_212121"
+            android:textSize="@dimen/text_size_15_sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_EEEEEE"
+        android:layout_margin="@dimen/dimen_15"/>
+
+    <RelativeLayout
+        android:id="@+id/personal_gender_lay"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/personal_gender_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/personal_gender"
+            android:textColor="@color/color_212121"
+            android:textSize="@dimen/text_size_15_sp" />
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_toRightOf="@id/personal_gender_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/personal_checkbox"
+                android:gravity="center_horizontal"
+                android:text="@string/gender_man"
+                android:textColor="@color/color_212121"
+                android:textSize="@dimen/text_size_15_sp"
+                />
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:button="@null"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/personal_checkbox"
+                android:gravity="center_horizontal"
+                android:text="@string/gender"
+                android:textColor="@color/color_212121"
+                android:textSize="@dimen/text_size_15_sp"
+                />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_EEEEEE"
+        android:layout_margin="@dimen/dimen_15"/>
+    <RelativeLayout
+        android:id="@+id/personal_age_lay"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/personal_age_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/personal_age"
+            android:textColor="@color/color_212121"
+            android:textSize="@dimen/text_size_15_sp" />
+        <TextView
+            android:id="@+id/personal_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/personal_age_tip"
+            android:layout_marginLeft="80dp"
+            android:hint="请设置你的生日"
+            android:textColorHint="@color/color_C3C3C3"
+            android:textColor="@color/color_212121"
+            android:textSize="@dimen/text_size_15_sp"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/wallet_right" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/tv_tips"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_40"
+        android:layout_marginRight="@dimen/dimen_16"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:background="@drawable/login_sigin_bg"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size17" />
+</LinearLayout>

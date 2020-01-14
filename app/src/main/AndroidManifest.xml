@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ctb_open_car">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+    <application
+        android:name=".CTBApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <!--        <uses-library android:name="org.apache.http.legacy" android:required="false"/>-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="2fdfba289af7b4aae126bf63c431375f" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5cadc5e63fc19595a90000b9" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${Channel_ID}" />
+
+
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1119190816030601#opencar-test" />
+        <!-- 声明SDK所需的service SDK核心功能-->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+
+        <activity
+            android:name=".view.activity.SplashActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.activity.person.ModifyPersonalInfoActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name=".view.activity.vehicletools.ViolationWebViewActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.activity.vehicletools.VehicleManagementActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.activity.vehicletools.ViolationDetailsActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.activity.vehicletools.VehicleToolsActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.activity.cartool.AddCarInfoActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.activity.shopMall.ShopManagementActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.activity.login.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.activity.activities.PushActivitiesActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.activity.activities.ReleaseActivitiesActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".view.activity.news.ColumnActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- <meta-data android:name="CTB_CHANNEL" android:value="${CTB_CHANNEL_VALUE}"/> -->
+        <activity
+            android:name=".view.activity.news.BloggerInfoActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.activity.community.FeedsDetailActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".view.activity.dynamic.ReleaseActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.activity.dynamic.AblumSelecteActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".view.activity.community.ActivityDetailActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden" />
+        <activity
+            android:name=".view.activity.community.CommunityActivty"
+            android:configChanges="screenSize|orientation|keyboardHidden" />
+        <activity
+            android:name=".view.activity.community.CarToolActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden" />
+        <activity
+            android:name=".view.activity.im.CreateGroupActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden" />
+        <activity
+            android:name=".view.activity.im.AddGroupInfoActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden" />
+        <activity
+            android:name=".view.activity.im.ImGroupMemberListActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.activity.im.ImGroupInfoActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden" />
+        <activity
+            android:name=".view.activity.map.NaviSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.map.LocSearchActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.map.NaviActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.person.PersonHomeActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden" />
+        <activity
+            android:name=".view.activity.community.BannerDetailActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden" />
+        <activity android:name=".view.activity.search.SearchUserActivity" />
+        <activity android:name=".view.activity.map.CollectPoiActivity" />
+        <activity android:name=".view.activity.map.FindAddressActivity" />
+        <activity android:name=".view.activity.map.MapPickerActivity" />
+        <activity
+            android:name=".view.activity.im.ChatGroupActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden" />
+        <activity android:name=".view.activity.im.MyGroupMoreActivity" />
+        <activity android:name=".view.activity.im.TagGroupMoreActivity" />
+        <activity android:name=".view.activity.im.GroupSearchActivity" />
+        <activity android:name=".view.activity.im.GroupSettingsActivity" />
+        <activity
+            android:name=".view.activity.im.ContextMenuActivity"
+            android:theme="@style/MyDialogStyle" />
+
+        <service android:name="com.amap.api.location.APSService" />
+        <service android:name="com.amap.api.location.APSService" />
+        <service android:name="com.zlw.main.recorderlib.recorder.RecordService" />
+    </application>
+
+</manifest>

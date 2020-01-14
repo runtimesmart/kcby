@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_outside_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rl_inputdlg_view"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:background="@color/color_F8F8F8">
+
+        <TextView
+            android:id="@+id/publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_F8F8F8"
+            android:textColor="@color/color_3240DB"
+            android:textSize="19sp"
+            android:gravity="left"
+            android:paddingTop="20dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="15dp"
+            android:text="@string/publish"/>
+
+        <EditText
+            android:id="@+id/et_input_message"
+            android:layout_toLeftOf="@id/publish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:hint="想说点什么"
+            android:imeOptions="flagNoExtractUi"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLength="2000"
+            android:maxLines="6"
+            android:maxHeight="48dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:scrollbars="vertical"
+            android:textColor="#FF333333"
+            android:background="@android:color/white"
+            android:textColorHint="@color/color_cccccc"
+            android:textSize="@dimen/text_size_16_sp"
+            tools:ignore="InvalidImeActionId" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

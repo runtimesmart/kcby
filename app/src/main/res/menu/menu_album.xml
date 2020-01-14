@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/photo"
+        android:title="@string/photo"/>
+    <item
+        android:id="@+id/album_select"
+        android:title="@string/album_select" />
+    <item
+        android:id="@+id/cancel"
+        android:title="@string/cancel" />
+</menu>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.vehicletools.VehicleManagementActivity">
+
+    <include
+        android:id="@+id/statusbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_49"
+        android:layout_marginLeft="@dimen/dimen_15"
+        layout="@layout/activity_statusbar"/>
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_below="@id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:id="@+id/add_info_car"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/recyclerview"
+        android:background="@drawable/wallet_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/wallet_add" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/vehicle_add"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_12_sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

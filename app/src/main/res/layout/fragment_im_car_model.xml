@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/statusbar"
+        android:layout_marginTop="@dimen/dimen_25"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_48"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="@dimen/dimen_48"
+            android:layout_height="@dimen/dimen_48"
+            android:scaleType="center"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/statusbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="完成"
+            android:textColor="@color/color_0C0C0C"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:id="@+id/statusbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/statusbar_right"
+            android:layout_toRightOf="@id/ic_back"
+            android:gravity="center"
+            android:text="@string/select_car_system_title"
+            android:textColor="@color/color_0C0C0C"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyuclerview"
+        android:layout_below="@id/statusbar"
+        android:layout_margin="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

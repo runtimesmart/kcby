@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp"
+    android:paddingRight="20dp">
+
+    <!--    评论用户信息-->
+
+    <include layout="@layout/ugc_common_userinfo_view" />
+
+    <!--    二级评论,初始隐藏-->
+    <include
+        android:id="@+id/secondary_cmt_layout"
+        layout="@layout/ugc_topic_sub_comment_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:visibility="gone" />
+
+    <!--    原始动态-->
+    <include
+        android:id="@+id/feed_content_origin"
+        layout="@layout/ugc_common_origin_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp" />
+
+
+    <!--    回复、转发、点赞-->
+    <include
+        layout="@layout/ugc_comment_scl_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="15dp" />
+    <!--    分割线-->
+    <include layout="@layout/ugc_common_divider" />
+
+
+</LinearLayout>

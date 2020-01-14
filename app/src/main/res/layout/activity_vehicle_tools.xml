@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.vehicletools.VehicleToolsActivity">
+
+    <include
+        layout="@layout/activity_statusbar"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_48" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_10">
+
+        <RelativeLayout
+            android:id="@+id/add_info_car"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_85"
+            android:visibility="gone"
+            android:background="@drawable/wallet_item_bg">
+
+            <ImageView
+                android:id="@+id/add_car"
+                android:layout_width="@dimen/dimen_40"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/add_car_info" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_toRightOf="@id/add_car"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vehicle_add_info"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_17_sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/vehicle_rules_service"
+                    android:textColor="@color/color_9B9B9B"
+                    android:textSize="@dimen/text_size_12_sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/info_car"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_125"
+            android:padding="@dimen/dimen_10"
+            android:background="@drawable/wallet_item_bg">
+
+            <ImageButton
+                android:id="@+id/add_car_bt"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@id/community_tab_layout"
+                android:src="@drawable/add_car_icon"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/community_tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_25"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:layout_alignParentLeft="true"
+                app:tabBackground="@android:color/white"
+                app:tabIndicatorColor="@color/community_tab_txt_indicator_color"
+                app:tabIndicatorHeight="3dip"
+                app:tabIndicatorFullWidth="false"
+                app:tabMinWidth="@dimen/dimen_25"
+                app:tabGravity="fill"
+                app:tabMode="scrollable"
+                app:tabPaddingEnd="5dip"
+                app:tabPaddingStart="5dip"
+                app:tabSelectedTextColor="@android:color/black"
+                app:tabTextAppearance="@style/tab_head"
+                app:tabTextColor="@color/color_cccccc" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/community_tab_layout"
+                android:layout_marginTop="10dip"
+                android:background="@android:color/white" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:background="@drawable/car_info_bg"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_25"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="@dimen/dimen_15"
+                android:gravity="center_vertical"
+                android:background="@drawable/location_icon"/>
+            <TextView
+                android:id="@+id/location"
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/vehicle_add_info"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_17_sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_F3F4F5"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginBottom="@dimen/dimen_22"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/dimen_27"
+                android:layout_height="@dimen/dimen_27"
+                android:background="@drawable/car_limit_line"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dimen_17"
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:text="@string/limit_row_today"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_17_sp" />
+
+            <TextView
+                android:id="@+id/limit_number"
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="right"
+                android:text="未知"
+                android:textColor="@color/color_4A4A4A"
+                android:textSize="@dimen/text_size_13_sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/limit_remark"
+                android:layout_marginLeft="@dimen/dimen_44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="未知"
+                android:textColor="@color/color_BEC1D1"
+                android:textSize="@dimen/text_size_12_sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_F3F4F5"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_20"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/dimen_27"
+                android:layout_height="@dimen/dimen_27"
+                android:background="@drawable/oil_price"/>
+            <TextView
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dimen_17"
+                android:text="@string/oil_price_today"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_17_sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_F3F4F5"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_16"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dimen_44"
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:text="90#汽油"
+                android:textColor="@color/color_4A4A4A"
+                android:textSize="@dimen/text_size_14_sp" />
+
+            <TextView
+                android:id="@+id/oil_90"
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="未知"
+                android:textColor="@color/color_3240DB"
+                android:textSize="@dimen/text_size_14_sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_F3F4F5"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginBottom="@dimen/dimen_16"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dimen_44"
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:text="93#汽油"
+                android:textColor="@color/color_4A4A4A"
+                android:textSize="@dimen/text_size_14_sp" />
+
+            <TextView
+                android:id="@+id/oil_93"
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="未知"
+                android:textColor="@color/color_3240DB"
+                android:textSize="@dimen/text_size_14_sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_F3F4F5"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginBottom="@dimen/dimen_16"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dimen_44"
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:text="97#汽油"
+                android:textColor="@color/color_4A4A4A"
+                android:textSize="@dimen/text_size_14_sp" />
+
+            <TextView
+                android:id="@+id/oil_97"
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="未知"
+                android:textColor="@color/color_3240DB"
+                android:textSize="@dimen/text_size_14_sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_F3F4F5"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginBottom="@dimen/dimen_16"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dimen_44"
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:text="0#柴油"
+                android:textColor="@color/color_4A4A4A"
+                android:textSize="@dimen/text_size_14_sp" />
+
+            <TextView
+                android:id="@+id/oil_0"
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="未知"
+                android:textColor="@color/color_3240DB"
+                android:textSize="@dimen/text_size_14_sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

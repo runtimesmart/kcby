@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp">
+
+    <Button
+        android:id="@+id/event_newest"
+        android:layout_width="91dp"
+        android:layout_height="30dp"
+        android:background="@drawable/event_selected_bg"
+        android:gravity="center"
+        android:text="最新活动"
+        android:textColor="@color/community_event_btn_color"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/event_local"
+        android:layout_width="91dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/event_newest"
+        android:background="@drawable/event_unselected_bg"
+        android:gravity="center"
+        android:text="本地"
+        android:textColor="@color/community_event_btn_color" />
+
+    <TextView
+        android:id="@+id/creat_event_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="@string/ugc_event_new"
+        android:textColor="@color/community_me_name_color" />
+</RelativeLayout>

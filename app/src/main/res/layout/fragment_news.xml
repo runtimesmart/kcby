@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragment.NewsFragment">
+
+    <TextView
+        android:id="@+id/title_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="资讯模式"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/search_bg"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/title_fragment"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rounded_rectangle"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/search_icon" />
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:hint="@string/search" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/more_bt"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/search_bg"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/more"
+        android:visibility="gone"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/community_tab_layout"
+        android:layout_width="match_parent"
+        android:paddingRight="10dp"
+        android:layout_height="34dip"
+        android:layout_below="@id/search_bg"
+        android:layout_toLeftOf="@id/more_bt"
+        app:tabBackground="@android:color/white"
+        app:tabIndicatorColor="@color/community_tab_txt_indicator_color"
+        app:tabIndicatorHeight="3dip"
+        app:tabIndicatorFullWidth="false"
+        app:tabMaxWidth="0dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="5dip"
+        app:tabPaddingStart="5dip"
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabTextAppearance="@style/tab_head"
+        app:tabTextColor="@color/color_cccccc" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/community_tab_layout"
+        android:layout_marginTop="10dip"
+        android:background="@android:color/white" />
+</RelativeLayout>

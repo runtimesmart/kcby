@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 2
+        versionName "1.5.0"
+
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            buildConfigField('String', 'TEST_SERVER_URL', '"http://192.168.60.91:18202"')
+            buildConfigField('String', 'TEST_SERVER_URL', '"https://toc.chetuobang.com"')
+            buildConfigField('String', 'Market_SERVER_URL', '"https://oc.chetuobang.com"')
+
+        }
+        debug{
+            minifyEnabled false
+//            buildConfigField('String', 'TEST_SERVER_URL', '"http://192.168.60.91:18202"')
+            buildConfigField('String', 'TEST_SERVER_URL', '"https://toc.chetuobang.com"')
+            buildConfigField('String', 'Market_SERVER_URL', '"https://oc.chetuobang.com"')
+
+        }
+    }
+
+    flavorDimensions "mode"
+        productFlavors {
+            chetuobang {
+                dimension "mode"
+                manifestPlaceholders = [Channel_ID: "chetuobang"]
+            }
+
+            baidu {
+                dimension "mode"
+                manifestPlaceholders = [Channel_ID: "baidu"]
+            }
+            yingyongbao {
+                dimension "mode"
+                manifestPlaceholders = [Channel_ID: "yingyongbao"]
+            }
+            huawei {
+                dimension "mode"
+                manifestPlaceholders = [Channel_ID: "huawei"]
+            }
+            xiaomi {
+                dimension "mode"
+                manifestPlaceholders = [Channel_ID: "xiaomi"]
+            }
+        }
+}
+
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'org.greenrobot:greendao:3.2.0'
+    /*rx-android-java*/
+    api 'com.trello:rxlifecycle:1.0'
+    api 'com.trello:rxlifecycle-components:1.0'
+    /*rotrofit*/
+    api 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    api 'com.squareup.retrofit2:retrofit:2.1.0'
+    api 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.ctb_open_car.customview.NoScrollViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs_rg"/>
+
+    <RadioGroup
+        android:id="@+id/tabs_rg"
+        android:layout_width="match_parent"
+        android:layout_height="65dip"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="8dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/main_tab_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/home_tab"
+            style="@style/TabRadioButton"
+            android:layout_marginTop="5dp"
+            android:checked="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawableTop="@drawable/tab_main_selector"
+            android:text="首页"
+            android:textColor="@color/color_radiobutton"
+            android:textSize="@dimen/text_size_12_sp"/>
+        <RadioButton
+            android:id="@+id/news_tab"
+            android:layout_marginTop="5dp"
+            style="@style/TabRadioButton"
+            android:drawableTop="@drawable/tab_main_news_selector"
+            android:text="资讯"
+            android:textColor="@color/color_radiobutton"
+            android:textSize="@dimen/text_size_12_sp"/>
+
+        <View style="@style/TabRadioButton" />
+<!--        <RadioButton-->
+<!--            android:id="@+id/release_tab"-->
+<!--            style="@style/TabRadioButtonCreate"-->
+<!--            android:background="@drawable/release_selected"/>-->
+
+        <RadioButton
+            android:id="@+id/shop_tab"
+            style="@style/TabRadioButton"
+            android:layout_marginTop="5dp"
+            android:drawableTop="@drawable/tab_main_shop_selector"
+            android:text="商城"
+            android:textColor="@color/color_radiobutton"
+            android:textSize="@dimen/text_size_12_sp"/>
+
+        <RadioButton
+            android:id="@+id/my_tab"
+            style="@style/TabRadioButton"
+            android:layout_marginTop="5dp"
+            android:drawableTop="@drawable/tab_main_me_selector"
+            android:text="个人"
+            android:textColor="@color/color_radiobutton"
+            android:textSize="@dimen/text_size_12_sp"/>
+    </RadioGroup>
+
+
+    <ImageView
+        android:id="@+id/release_tab"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/release_selected" />
+</RelativeLayout>

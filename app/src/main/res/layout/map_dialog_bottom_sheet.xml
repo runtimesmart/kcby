@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_rectangle_white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/map_filter_girl"
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40">
+
+            <TextView
+                android:id="@+id/map_feed_filter_girl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+
+                android:text="只看女生"
+                android:textColor="@color/color_radio_selector" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_toRightOf="@id/map_feed_filter_girl"
+                android:src="@drawable/icon_checked"
+
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_cccccc" />
+
+        <RelativeLayout
+            android:id="@+id/map_filter_boy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/map_feed_filter_boy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="只看男生"
+                android:textColor="@color/color_radio_selector" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_toRightOf="@id/map_feed_filter_boy"
+                android:src="@drawable/icon_checked"
+
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_cccccc" />
+
+        <RelativeLayout
+            android:id="@+id/map_filter_all"
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/dimen_40"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/map_feed_filter_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="查看全部"
+                android:textColor="@color/color_radio_selector" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_toRightOf="@id/map_feed_filter_all"
+                android:src="@drawable/icon_checked"
+
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_cccccc" />
+
+        <RelativeLayout
+            android:id="@+id/map_filter_search"
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/dimen_40"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/map_feed_filter_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="搜索用户"
+                android:textColor="@color/color_radio_selector" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_toRightOf="@id/map_feed_filter_search"
+                android:src="@drawable/icon_checked"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="@dimen/dimen_1"-->
+        <!--            android:background="@color/color_cccccc" />-->
+
+
+    </LinearLayout>
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <CheckedTextView-->
+
+    <!--            android:drawableLeft="@drawable/map_dialog_item_bg"-->
+
+    <!--            android:id="@android:id/text1"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:minHeight="?android:attr/listPreferredItemHeight"-->
+    <!--            android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--            android:textColor="?android:attr/textColorAlertDialogListItem"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:text="选中"-->
+    <!--            android:ellipsize="marquee"/>、-->
+
+    <!--        <CheckedTextView-->
+    <!--        android:id="@+id/checkedTextView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:singleLine="true"-->
+    <!--        android:checkMarkTint="@android:color/black"-->
+    <!--        android:checkMarkTintMode="src_in"-->
+    <!--        android:drawablePadding="5dp"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--            android:layout_gravity="center"-->
+    <!--        android:checkMark="@drawable/icon_checked"-->
+    <!--        android:text="CheckedTextView" />-->
+    <!--    </LinearLayout>-->
+
+    <!--    <RadioGroup-->
+    <!--        android:id="@+id/map_top_filter"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@android:color/white"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <CheckBox-->
+    <!--            android:id="@+id/map_filter_nearby"-->
+    <!--            style="@style/TabRadioButton"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="@dimen/dimen_40"-->
+    <!--            android:checked="true"-->
+    <!--            android:drawableRight="@drawable/icon_checked"-->
+    <!--            android:drawablePadding="10dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="附近"-->
+    <!--            android:textColor="@color/color_map_radiobutton"-->
+    <!--            android:textSize="@dimen/text_size14" />-->
+
+    <!--        <RadioButton-->
+    <!--            android:id="@+id/map_filter_hot"-->
+    <!--            style="@style/TabRadioButton"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="@dimen/dimen_40"-->
+    <!--            android:drawableLeft="@drawable/tab_map_filter_selector"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="热门"-->
+
+    <!--            android:textColor="@color/color_map_radiobutton"-->
+    <!--            android:textSize="@dimen/text_size14" />-->
+
+    <!--        <RadioButton-->
+    <!--            android:id="@+id/map_filter_focus"-->
+    <!--            style="@style/TabRadioButton"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="@dimen/dimen_40"-->
+    <!--            android:drawableLeft="@drawable/tab_map_filter_selector"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="关注"-->
+
+    <!--            android:textColor="@color/color_map_radiobutton"-->
+    <!--            android:textSize="@dimen/text_size14" />-->
+
+    <!--        <com.ctb_open_car.view.DrawCenterButton-->
+    <!--            android:id="@+id/map_filter_customize"-->
+    <!--            style="@style/TabRadioButton"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_height="@dimen/dimen_40"-->
+    <!--            android:drawableRight="@drawable/icon_checked"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="定制"-->
+
+    <!--            android:textColor="@color/color_map_radiobutton"-->
+    <!--            android:textSize="@dimen/text_size14" />-->
+    <!--    </RadioGroup>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_4"
+        android:background="@color/color_cccccc" />
+
+    <TextView
+        android:id="@+id/map_feed_filter_cancel"
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/dimen_40"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+
+        android:text="取消" />
+</LinearLayout>

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragment.MeFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:background="@drawable/wallet_titlebar_bg">
+
+                    <RelativeLayout
+                        android:id="@+id/user_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="73dp">
+
+                        <ImageView
+                            android:id="@+id/avar_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/default_avar_icon" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@id/avar_icon"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/user_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/text_size_18_sp" />
+
+                            <TextView
+                                android:id="@+id/user_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/color_60_FFFFFF"
+                                android:textSize="@dimen/text_size_14_sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="165dp"
+                    android:background="@drawable/wallet_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/avar_icon"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/car_coin_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_4755DE"
+                            android:textSize="@dimen/text_size_25_sp" />
+
+                        <TextView
+                            android:id="@+id/car_coin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/car_coin"
+                            android:textColor="@color/color_444444"
+                            android:textSize="@dimen/text_size_13_sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/avar_icon"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/rmb_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_444444"
+                            android:textSize="@dimen/text_size_25_sp" />
+
+                        <TextView
+                            android:id="@+id/rmb_tab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/rmb_tab"
+                            android:textColor="@color/color_444444"
+                            android:textSize="@dimen/text_size_13_sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wallet_item_bg"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vehicle_service"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_18_sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="12dp">
+
+                    <RelativeLayout
+                        android:id="@+id/car_info_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/number_plate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="车牌号"
+                                android:textColor="@color/color_090909"
+                                android:textSize="@dimen/sp_23" />
+
+                            <TextView
+                                android:id="@+id/car_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/me_car_info_bg"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="3dp"
+                                android:text="车辆品牌"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_13" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/car_icon"
+                            android:layout_width="130dp"
+                            android:layout_height="62dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/defualt_car_icon" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/add_info_car"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/wallet_car_server_bg"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/wallet_add" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/vehicle_add"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/text_size_12_sp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/limit_row_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/wallet_car_item_bg"
+                    android:visibility="gone"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/limit_row_logo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/limit_row" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/limit_row_logo"
+                        android:text="@string/limit_row"
+                        android:textColor="@color/color_090909"
+                        android:textSize="@dimen/text_size_14_sp" />
+
+                    <ImageView
+                        android:layout_width="5dp"
+                        android:layout_height="9dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/wallet_right" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/vehicle_rules_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/wallet_car_item_bg"
+                    android:visibility="gone"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/vehicle_rules_logo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/vehicle_rules" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/vehicle_rules_logo"
+                        android:text="@string/vehicle_rules"
+                        android:textColor="@color/color_090909"
+                        android:textSize="@dimen/text_size_14_sp" />
+
+                    <ImageView
+                        android:layout_width="5dp"
+                        android:layout_height="9dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/wallet_right" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/vip_shop"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_16_sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/my_invitation_code"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="49dp"
+                            android:layout_height="46dp"
+                            android:src="@drawable/my_invitation_code" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/my_invitation_code"
+                            android:textColor="@color/color_575757"
+                            android:textSize="@dimen/text_size_12_sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/my_order_lay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_toRightOf="@id/avar_icon"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="49dp"
+                            android:layout_height="46dp"
+                            android:src="@drawable/my_order_lay" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/my_order"
+                            android:textColor="@color/color_575757"
+                            android:textSize="@dimen/text_size_12_sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/address_management_lay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_toRightOf="@id/avar_icon"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="49dp"
+                            android:layout_height="46dp"
+                            android:src="@drawable/address_management_lay" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/address_management"
+                            android:textColor="@color/color_575757"
+                            android:textSize="@dimen/text_size_12_sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/telephone_lay"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/wallet_car_item_bg"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/telephone_logo"
+                    android:layout_width="21dp"
+                    android:layout_height="19dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/customer_service" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/telephone_logo"
+                    android:text="@string/customer_service"
+                    android:textColor="@color/color_090909"
+                    android:textSize="@dimen/text_size_16_sp" />
+
+                <TextView
+                    android:id="@+id/customerService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/color_090909"
+                    android:textSize="@dimen/text_size_16_sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sign_out"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/wallet_car_item_bg"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/sign_out"
+                    android:textColor="@color/color_090909"
+                    android:textSize="@dimen/text_size_16_sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

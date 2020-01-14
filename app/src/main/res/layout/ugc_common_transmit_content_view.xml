@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transmit_content_color">
+
+    <!--    转发消息-->
+    <LinearLayout
+        android:id="@+id/ugc_feeds_transmit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+            android:id="@+id/ugc_feeds_transmitted_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_666666"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            android:gravity="left" />
+        <TextView
+            android:id="@+id/ugc_transmit_feed_ellipsize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/color_3240DB" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_55"
+    android:orientation="vertical"
+    tools:context=".view.fragment.NewsFragment">
+
+    <TextView
+        android:id="@+id/vehicle_number_message"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="条违章信息，点击查看>>"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/color_3240DB"/>
+</RelativeLayout>

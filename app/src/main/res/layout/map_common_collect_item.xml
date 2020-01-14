@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dimen_15"
+    android:paddingStart="@dimen/dimen_15"
+    android:paddingEnd="@dimen/dimen_15"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/icon_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:src="@drawable/icon_home" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/icon_collect"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/collect_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="家"
+            android:textSize="@dimen/text_size17" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginStart="@dimen/dimen_2"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_3"
+                android:layout_toLeftOf="@id/collect_address"
+                android:src="@drawable/icon_add" />
+
+            <TextView
+                android:id="@+id/collect_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:maxEms="20"
+                android:text="点击设置家的位置"
+                android:textColor="@color/color_9B9B9B"
+                android:textSize="@dimen/text_size12" />
+
+        </LinearLayout>
+
+        <include layout="@layout/ugc_common_divider" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/collect_address_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_10"
+        android:paddingBottom="@dimen/dimen_10"
+        android:src="@drawable/icon_edit" />
+</RelativeLayout>

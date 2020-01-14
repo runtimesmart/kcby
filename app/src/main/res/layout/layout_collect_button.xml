@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/collect_add_new"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_48"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dimen_10"
+    android:elevation="@dimen/dimen_10"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:layout_marginBottom="@dimen/dimen_25"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_add_plus" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_3"
+            android:text="添加新地址"
+            android:textColor="@color/color_7c7c7c" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

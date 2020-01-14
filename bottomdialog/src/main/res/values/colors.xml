@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_light">#f2f2f2</color>
+    <color name="gray_font_dark">#646464</color>
+    <color name="black">#202020</color>
+    <color name="dot_hong">#E73111</color>
+    <color name="text_bottom_comment">#9B9B9B</color>
+    <color name="touming">#00000000</color>
+    <color name="dialog_background">#F8F8F8</color>
+    <color name="color_normal_gray">#CCCCCC </color>
+    <color name="color_text_gray">#9B9B9B </color>
+    <color name="color_text_highlight">#3240DB </color>
+</resources>

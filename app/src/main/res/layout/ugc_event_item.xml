@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dimen_20"
+    android:paddingLeft="@dimen/dimen_20"
+    android:paddingRight="@dimen/dimen_20"
+    android:paddingBottom="@dimen/dimen_20"
+    android:orientation="vertical">
+    <!--动态用户信息部分-->
+    <include layout="@layout/ugc_common_userinfo_view" />
+
+    <!--    活动主题和状态-->
+    <include layout="@layout/ugc_common_event_topic_view" />
+
+    <!--    活动日期信息-->
+    <include layout="@layout/ugc_common_event_date_view" />
+
+    <!--    原消息内容-->
+    <include
+        android:id="@+id/feed_content_origin"
+        layout="@layout/ugc_common_origin_content_view" />
+
+    <!--    活动封面-->
+    <LinearLayout
+        android:id="@+id/feed_event_covers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <!-- 分割线-->
+    <include android:id="@+id/bottom_divider" layout="@layout/ugc_common_divider" />
+
+    <!--    转评赞-->
+    <include
+        android:layout_height="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:id="@+id/feed_event_cta"
+        layout="@layout/ugc_common_cta_view" />
+</LinearLayout>

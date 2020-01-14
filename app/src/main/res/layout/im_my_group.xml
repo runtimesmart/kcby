@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/dimen_8"
+            android:src="@drawable/icon_back" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/my_group_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@id/btn_back"
+            app:tabIndicatorHeight="0dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_empty_group_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimen_68"
+        android:layout_marginTop="@dimen/dimen_44">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_tip"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ugc_group_not_create"
+            android:textColor="@color/color_9B9B9B"
+            android:layout_above="@id/btn_create"
+            android:layout_marginBottom="@dimen/dimen_118"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/text_size14" />
+
+        <Button
+            android:id="@+id/btn_create"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_tips"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dimen_20"
+            android:background="@drawable/login_sigin_bg"
+            android:gravity="center"
+            android:text="创建群"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size17" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_group_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

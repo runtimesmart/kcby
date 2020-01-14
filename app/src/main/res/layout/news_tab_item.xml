@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="92dp"
+    android:layout_height="wrap_content"
+    tools:context=".view.activity.news.ColumnActivity">
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:padding="5dp">
+       <ImageView
+           android:id="@+id/tab_image"
+           android:layout_width="15dp"
+           android:layout_height="15dp"
+           android:background="@drawable/dynamic"/>
+       <TextView
+           android:id="@+id/img_title"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="5dp"
+           android:textColor="@android:color/white"
+           android:textSize="@dimen/text_size_14_sp"
+           android:text="dsfadfa"/>
+   </LinearLayout>
+</RelativeLayout>

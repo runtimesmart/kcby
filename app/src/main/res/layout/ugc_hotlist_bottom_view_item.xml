@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- 九宫格图片-->
+        <com.ctb_open_car.view.ImageGridLayout
+            android:id="@+id/feeds_pics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--   动态消息：位置、话题-->
+        <RelativeLayout
+            android:id="@+id/feeds_extra_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+            <!--  位置图标-->
+            <ImageView
+                android:id="@+id/feeds_lbs_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/lbs" />
+            <!-- 位置信息-->
+
+
+            <TextView
+                android:id="@+id/ugc_feed_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/feeds_lbs_icon"
+                android:text="海淀区中关村"
+                android:textColor="@color/community_pub_location"
+                android:textSize="13sp" />
+            <!--  话题类型-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="#猪肉价格上涨#"
+                android:visibility="invisible"
+                android:textColor="@color/community_topic_color"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <!--  分享到..-->
+        <include android:visibility="gone" android:id="@+id/share_to_third" layout="@layout/ugc_common_share_view" />
+
+
+        <!-- 分割线-->
+        <include android:id="@+id/bottom_divider" layout="@layout/ugc_common_divider" />
+
+        <!--转评赞-->
+        <include
+            layout="@layout/ugc_common_cta_view"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            />
+    </LinearLayout>

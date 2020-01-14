@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginEnd="@dimen/dimen_15"
+        android:background="@drawable/bottom_shadow"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/user_name_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_weight="4"
+            android:background="@drawable/search_box_bg"
+            android:hint="输入用户名"
+            android:imeOptions="actionSearch"
+            android:textColorHint="@color/color_C5C5C5"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dimen_20"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size14" />
+
+        <TextView
+            android:id="@+id/user_search_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15"
+            android:layout_toRightOf="@id/user_name_search"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textColor="@color/color_434343"
+            android:textSize="@dimen/dimen_15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_empty_tip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_49"
+        android:background="@color/color_f8f8f8"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/search_empty"
+            android:textColor="@color/color_666666" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_user_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

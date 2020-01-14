@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/im_chat_group_search" />
+
+    <TextView
+        android:id="@+id/group_search_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="您可以输入群号、群名称、关键字进行搜索"
+        android:textColor="@color/color_9B9B9B"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/text_size14" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/group_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

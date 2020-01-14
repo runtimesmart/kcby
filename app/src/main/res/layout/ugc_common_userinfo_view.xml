@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/feed_user_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/ugc_user_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/user_avatar_border"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar" />
+
+        <ImageView
+            android:id="@+id/ugc_user_auth_status"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignEnd="@id/ugc_user_avatar"
+            android:layout_alignBottom="@id/ugc_user_avatar"
+            android:src="@drawable/vip1" />
+
+        <LinearLayout
+            android:id="@+id/user_name_state_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/ugc_user_avatar"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+
+            android:paddingLeft="@dimen/dimen_15">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ugc_news_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="3dp"
+
+                    android:text="刘大锤"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ugc_user_mood"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ugc_news_signature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:text=""
+                android:textColor="@color/community_user_signature_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/ugc_news_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:text="认证：美妆达人"
+                android:textColor="@color/color_3240DB"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/expert_fans_attentions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/fans_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:textColor="@color/community_user_signature_color"
+
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/attention_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/community_user_signature_color"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_state_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="5dp"
+            android:gravity="center_vertical"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ugc_pub_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:drawableLeft="@drawable/dot"
+                android:drawablePadding="5dp"
+                android:text="1小时前"
+                android:textColor="@color/community_user_pub_time_color"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/ugc_follow_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="3dp"
+                android:visibility="gone"
+                android:src="@drawable/followed" />
+
+            <TextView
+                android:id="@+id/ugc_item_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="3dp"
+                android:paddingStart="@dimen/dimen_12"
+                android:paddingEnd="@dimen/dimen_12"
+                android:text="删除"
+                android:textSize="@dimen/text_size11"
+                android:background="@drawable/delete_txt_border"
+                android:visibility="gone"
+                android:textColor="@color/color_cccccc" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</merge>

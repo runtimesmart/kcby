@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_list_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/group_list_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_f8f8f8"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <include layout="@layout/im_chat_group_search" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/im_group_mine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15"
+                    android:layout_marginEnd="@dimen/dimen_15"
+
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:paddingBottom="@dimen/dimen_10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:drawableStart="@drawable/icon_green_indicator"
+                            android:drawableEnd="@drawable/icon_green_group"
+                            android:drawablePadding="@dimen/dimen_10"
+                            android:text="我的群"
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/text_size17" />
+
+                        <TextView
+                            android:id="@+id/my_group_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:drawableEnd="@drawable/icon_green_arrow"
+                            android:drawablePadding="@dimen/dimen_10"
+                            android:text="更多"
+                            android:textColor="@color/color_B5B5B5"
+                            android:textSize="@dimen/text_size14" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/im_group_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_30"
+                        android:layout_marginBottom="@dimen/dimen_30"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/im_group_action_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_group_create_tip"
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/text_size16" />
+
+                        <TextView
+                            android:id="@+id/im_group_action"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_18"
+                            android:text="@string/my_group_create"
+                            android:textColor="@color/color_FF13D644"
+                            android:textSize="@dimen/text_size16" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/im_group_mine_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!--   热门群-->
+                <LinearLayout
+                    android:id="@+id/im_group_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginEnd="@dimen/dimen_15"
+                    android:background="@color/color_white"
+
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:paddingBottom="@dimen/dimen_10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:drawableLeft="@drawable/icon_red_indicator"
+                            android:drawableRight="@drawable/icon_hot_flag"
+                            android:drawablePadding="@dimen/dimen_10"
+
+                            android:text="热门推荐"
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/text_size17" />
+
+                        <TextView
+                            android:id="@+id/hot_group_more"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:drawableEnd="@drawable/icon_red_arrow"
+                            android:drawablePadding="@dimen/dimen_10"
+                            android:text="更多"
+                            android:textColor="@color/color_B5B5B5"
+                            android:textSize="@dimen/text_size14" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/im_group_hot_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/im_group_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="@dimen/dimen_15"
+                    android:layout_marginEnd="@dimen/dimen_15" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+

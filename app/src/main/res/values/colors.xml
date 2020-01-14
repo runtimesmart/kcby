@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="line_gray">#dcdcdc</color>
+    <color name="light_gray_light">#f1f1f1</color>
+    <color name="gray_page_bg">#ecedf1</color>
+    <color name="gray_text">#5b5b5b</color>
+    <color name="gray_text_dark">#292929</color>
+    <color name="gray_text_light">#979797</color>
+    <color name="window_half_transparent">#90000000</color>
+    <color name="blue_white">#0eabe5</color>
+    <!-- 主页 -->
+    <color name="menu_gray">#8a8a8a</color>
+    <color name="menu_green">#45c01a</color>
+    <!-- 微信 -->
+    <color name="wx_head_selected">#45c01a</color>
+    <color name="wx_head_default">#5b666f</color>
+    <color name="color_cccccc">#CCCCCC</color>
+    <color name="color_bright_orange">#FFCC00</color>
+    <color name="color_light_grey">#F5F5F5</color>
+
+<!--    社区-热门-->
+    <color name="community_tab_txt_indicator_color">#3240DB</color>
+    <color name="community_tab_txt_normal_color">#CCCCCC</color>
+    <color name="community_tab_txt_focus_color">#333333</color>
+    <color name="color_C8CCD4">#C8CCD4</color>
+    <color name="community_user_signature_color">#FFBEC1D1</color>
+    <color name="community_feed_txt_color">#FF666666</color>
+    <color name="community_user_pub_time_color">#FFBEC1D1</color>
+    <color name="community_topic_color">#13D644</color>
+    <color name="community_pub_location">#FF666666</color>
+    <color name="community_event_info_color">#9B9B9B</color>
+    <color name="community_event_begin_status">#13D644</color>
+    <color name="community_avatar_border_color">#E3F0FF</color>
+    <color name="community_me_name_color">#3240DB</color>
+    <color name="community_search_bg_color">#E5E5E5</color>
+    <color name="community_event_btn_color">#FFFFFF</color>
+    <color name="community_event_newest_color">#3240DB</color>
+    <color name="community_event_local_color">#333240DB</color>
+    <color name="transmit_content_color">#FAFCFF</color>
+    <color name="community_topic_head_name_color">#FF666666</color>
+    <color name="community_topic_cmt_date_color">#BEC1D1</color>
+    <color name="community_topic_cmt_like_color">#B5B5B5</color>
+    <color name="community_sub_comment_name_color">#3240DB</color>
+    <color name="community_sub_comment_content_color">#2A2A2A</color>
+
+<!--    社交地图-->
+    <color name="map_search_tip">#D7D9DB</color>
+    <color name="map_search_cancel">#434343</color>
+
+
+    <color name="color_20_848484">#CC848484</color>
+    <color name="color_484848">#484848</color>
+    <color name="color_BEC1D1">#BEC1D1</color>
+    <color name="color_30_C3C3C3">#B3C3C3C3</color>
+    <color name="color_C3C3C3">#C3C3C3</color>
+    <color name="color_3B3B3B">#3B3B3B</color>
+    <color name="color_8D8D8D">#3B3B3B</color>
+    <color name="color_F0BB5D">#F0BB5D</color>
+    <color name="color_8E8E8E">#8E8E8E</color>
+    <color name="color_F8F8F8">#F8F8F8</color>
+    <color name="color_9B9B9B">#9B9B9B</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_444444">#444444</color>
+    <color name="color_434343">#434343</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_6A92F1">#6A92F1</color>
+    <color name="color_B5B5B5">#B5B5B5</color>
+    <color name="color_E5E5E5">#E5E5E5</color>
+    <color name="color_242424">#242424</color>
+    <color name="color_3240DB">#3240DB</color>
+    <color name="color_D8D8D8">#D8D8D8</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_DADADA">#DADADA</color>
+    <color name="color_272D32">#272D32</color>
+    <color name="color_1BC787">#1BC787</color>
+    <color name="color_fff6f6f6">#fff6f6f6</color>
+    <color name="color_FAFCFF">#FAFCFF</color>
+    <color name="color_4755DE">#4755DE</color>
+    <color name="color_60_FFFFFF">#66FFFFFF</color>
+    <color name="color_10_FFFFFF">#E6FFFFFF</color>
+    <color name="color_FFFFFF">#FFFFFF</color>
+    <color name="color_F9F9F9">#F9F9F9</color>
+    <color name="color_F95E59">#F95E59</color>
+    <color name="color_B6B9C2">#B6B9C2</color>
+    <color name="color_575757">#575757</color>
+    <color name="color_5264E9">#5264E9</color>
+    <color name="color_C5C5C5">#C5C5C5</color>
+    <color name="color_090909">#090909</color>
+    <color name="color_393939">#393939</color>
+    <color name="color_96_000000">#96000000</color>
+    <color name="color_606060">#606060</color>
+    <color name="color_828282">#828282</color>
+    <color name="color_CECECE">#CECECE</color>
+    <color name="color_688CEE">#688CEE</color>
+    <color name="color_686B89">#686B89</color>
+    <color name="color_4A4A4A">#4A4A4A</color>
+    <color name="color_F3F4F5">#F3F4F5</color>
+    <color name="color_FF4C6B">#FF4C6B</color>
+    <color name="color_4F5761">#4F5761</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_7c7c7c">#7c7c7c</color>
+    <color name="color_8F8F8F">#8F8F8F</color>
+    <color name="color_0C0C0C">#0C0C0C</color>
+    <color name="color_3342DC">#3342DC</color>
+    <color name="color_212121">#212121</color>
+    <color name="color_EEEEEE">#EEEEEE</color>
+    <color name="color_FF0000">#FF0000</color>
+    <color name="color_FF13D644">#ff13d644</color>
+    <color name="color_666770">#666770</color>
+    <color name="color_363636">#363636</color>
+    <color name="color_717171">#717171</color>
+    <color name="color_9FA3AC">#9FA3AC</color>
+</resources>
